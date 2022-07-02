@@ -30,10 +30,6 @@ public class Product {
                 Objects.equals(name, product.name);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, price);
-    }
 
     @Override
     public String toString() {
@@ -42,9 +38,5 @@ public class Product {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 '}';
-    }
-
-    public int getId() {
-        return id;
     }
 }

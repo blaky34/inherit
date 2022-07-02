@@ -34,7 +34,6 @@ public class ProductManagerTest {
 
         assertArrayEquals(expected, actual);
     }
-
     @Test
     public void shouldFindBookAuthor() {
         Product[] expected = {book1};
@@ -55,6 +54,14 @@ public class ProductManagerTest {
     public void shouldFindSmartphoneName() {
         Product[] expected = {smartphone1};
         Product[] actual = manger.searchBy("S8");
+
+        assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldNotFindSmartphoneName() {
+        Product[] expected = {};
+        Product[] actual = manger.searchBy("S9");
 
         assertArrayEquals(expected, actual);
     }

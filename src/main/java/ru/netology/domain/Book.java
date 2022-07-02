@@ -27,10 +27,6 @@ public class Book extends Product {
         return Objects.equals(author, book.author);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(super.hashCode(), author);
-    }
 
     @Override
     public String toString() {

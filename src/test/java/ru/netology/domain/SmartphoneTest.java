@@ -4,31 +4,32 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BookTest {
+class SmartphoneTest {
     @Test
     public void shouldHaveAllFieldsAndMethodFromSuperClass() {
-        Book book = new Book();
+        Smartphone smartphone = new Smartphone();
     }
 
     @Test
     public void shouldCastFromBaseClass() {
-        Product product = new Book();
-        if (product instanceof Book) {
-            Book book = (Book) product;
+        Product product = new Smartphone();
+        if (product instanceof Smartphone) {
+            Smartphone smartphone = (Smartphone) product;
         }
     }
 
     @Test
     public void shouldUseEquals() {
-        Product first = new Book (2, "Психология", 1000, "Фрейд");
-        Product second = new Book (2, "Психология", 1000, "Фрейд");
+        Product first = new Smartphone (3, "s8", 1000, "Nokia");
+        Product second = new Smartphone (3, "s8", 1000, "Nokia");
         assertEquals(first, second);
-    }
 
+    }
 
     @Test
     public void shouldUseOverridedMethod() {
-        Product product = new Book();
+        Product product = new Smartphone();
         product.toString();
     }
 }
+

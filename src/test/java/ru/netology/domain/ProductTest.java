@@ -11,4 +11,10 @@ class ProductTest {
         Product second = new Product(1, "Java I", 1000);
         assertEquals(first, second);
     }
+
+    @Test
+    public void shouldUseOverridedMethod() {
+        Product product = new Product();
+        product.toString();
+    }
 }
